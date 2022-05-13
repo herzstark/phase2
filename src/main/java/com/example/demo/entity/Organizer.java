@@ -1,10 +1,34 @@
 package com.example.demo.entity;
-
-public class Organizer {
-}
-
-
 /*
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+import java.util.List;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "organizerid")
+public class Organizer {
+    @Id
+    private String email;
+    private String surname;
+    private String name;
+    private String address;
+    private String phone;
+
+    @ManyToMany(mappedBy = "organizer",fetch = FetchType.EAGER)
+    private List<FestivalRun> festivalRunList;
+
+}*/
+
+
+
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.AllArgsConstructor;
@@ -39,4 +63,4 @@ public class Organizer {
 
 }
 
- */
+

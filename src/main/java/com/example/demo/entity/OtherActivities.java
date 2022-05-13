@@ -1,10 +1,10 @@
 package com.example.demo.entity;
-
+/*
 public class OtherActivities extends PublicEvent{
 }
+*/
 
 
-/*
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -13,4 +13,3 @@ import javax.persistence.Entity;
 @Entity
 public class OtherActivities extends PublicEvent{
 }
-*/

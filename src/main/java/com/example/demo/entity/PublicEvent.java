@@ -1,10 +1,33 @@
 package com.example.demo.entity;
-
-public class PublicEvent {
-}
-
-
 /*
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import lombok.Data;
+
+import javax.persistence.*;
+import java.util.Date;
+
+@Data
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "publiceventid")
+public class PublicEvent {
+    @Id
+    private int publicid;
+    private Date date;
+    private int duration;
+    private String description;
+    private String name;
+    private String starttime;
+
+    @ManyToOne
+    @JoinColumn(name = "festivalrunid", insertable = false, updatable = false)
+    private FestivalRun festivalRun;
+
+}
+*/
+
+
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.AllArgsConstructor;
@@ -41,4 +64,3 @@ public class PublicEvent {
 
 
 }
-*/
