@@ -1,0 +1,7 @@
+package com.example.demo.Repository;
+
+import com.example.demo.entity.PublicEvent;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PublicEventRepository extends JpaRepository<PublicEvent,Integer> {
+}
