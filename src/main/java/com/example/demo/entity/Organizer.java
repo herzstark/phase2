@@ -38,7 +38,9 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.List;
 import java.util.Set;
-
+/**
+ * This is Organizer class which builds the one of the EERD entities
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

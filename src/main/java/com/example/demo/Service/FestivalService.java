@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+/**
+ * This is Festival Service class which gets the data from Repository classes
+ */
 @Service
 public class FestivalService {
     @Autowired
@@ -23,7 +25,14 @@ public class FestivalService {
     public Festival getFestival(int festivalid) {
         return festivalRepository.findById(festivalid).orElse(null);
     }
-    public List<Festival> getFestivalsForaCity(String city){
-        return festivalRepository.findByCity(city);
+
+    public List<Festival> getFestivalsForaCity(String city){ return festivalRepository.findByplace(city);}
+
+    public List<Festival> getfestivalsbyname(String name) {
+        return festivalRepository.getfestivalsbyname(name);
+    }
+
+    public List<Festival> getpopularfestivals(){
+        return festivalRepository.getpopularfestivals();
     }
 }

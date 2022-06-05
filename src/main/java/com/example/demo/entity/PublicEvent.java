@@ -37,7 +37,9 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
-
+/**
+ * This is PublicEvent class which builds the one of the EERD entities
+ */
 @Data
 //@NoArgsConstructor
 //@AllArgsConstructor

@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+/**
+ * This is FestivalRun Service class which gets the data from Repository classes
+ */
 @Service
 public class FestivalRunService {
     @Autowired
@@ -26,7 +28,7 @@ public class FestivalRunService {
     }
 
     public List<FestivalRun>  getShortFestivalRun(int duration){
-        return festivalRunRepository.findByFestivalRunDuration(duration);
+        return festivalRunRepository.findByDuration(duration);
     }
 
 }

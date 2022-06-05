@@ -43,8 +43,9 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
-
-
+/**
+ * This is Festival class which builds the one of the EERD entities
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

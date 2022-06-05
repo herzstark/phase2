@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * This is the  controller class of Festival which gets data from service class
+ */
 @RestController
 public class FestivalController {
     @Autowired
@@ -21,6 +24,7 @@ public class FestivalController {
     public Festival getFestival(@PathVariable int festivalid){
         return festivalService.getFestival(festivalid);
     }
+
     @GetMapping("/getAllFestivals")
     public List<Festival> getAllFestivals(){
         return festivalService.getAllFestival();
@@ -29,6 +33,11 @@ public class FestivalController {
     @GetMapping("/getFestivalsForaCity/{city}")
     public List<Festival> getFestivalsForaCity(@PathVariable String city){
         return festivalService.getFestivalsForaCity(city);
+    }
+
+    @GetMapping("/popularfestivals")
+    public  List<Festival> getpopularfestivals(){
+        return festivalService.getpopularfestivals();
     }
 
 }

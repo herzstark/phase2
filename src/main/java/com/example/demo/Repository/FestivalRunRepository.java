@@ -5,8 +5,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-
+/**
+ * This is FestivalRun Repository class
+ */
 public interface FestivalRunRepository extends JpaRepository<FestivalRun,Integer> {
-    public List<FestivalRun> findByFestivalRunDuration(int duration);
+    public List<FestivalRun> findByDuration(int duration);
     public List<FestivalRun> findById(int festivalid);
 }

@@ -48,7 +48,9 @@ import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
-
+/**
+ * This is FestivalRun class which builds the one of the EERD entities
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

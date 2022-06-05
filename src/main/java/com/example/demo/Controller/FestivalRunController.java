@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * This is the  controller class of FestivalRun which gets data from service class
+ */
 @RestController
 public class FestivalRunController {
     @Autowired

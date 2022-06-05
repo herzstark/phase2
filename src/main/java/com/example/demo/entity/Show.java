@@ -9,10 +9,20 @@ public class Show extends PublicEvent{
 import lombok.Data;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import java.util.List;
-
+/**
+ * This is Show class which builds the one of the EERD entities
+ */
 @Data
 @Entity
+@Table(name = "Shows")
 public class Show extends PublicEvent{
-    List<String> performer;
+
+    String performer;
+
+    @OneToMany(mappedBy = "show")
+    private List<Performer> performers;
+
 }
