@@ -21,7 +21,7 @@ public class ConcertService {
     }
 
     public List<Concert> getconcertsbydescription(String keyword){
-        return concertRepository.findByConcertdescriptionContains(keyword);
+        return concertRepository.findBydescriptionContains(keyword);
     }
 
     public List<Concert> findlongestconcerts() {

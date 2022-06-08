@@ -32,7 +32,5 @@ public class FestivalService {
         return festivalRepository.getfestivalsbyname(name);
     }
 
-    public List<Festival> getpopularfestivals(){
-        return festivalRepository.getpopularfestivals();
-    }
+    public List<Festival> getpopularfestivals(){return festivalRepository.getpopularfestivals();}
 }

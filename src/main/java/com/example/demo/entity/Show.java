@@ -20,6 +20,8 @@ import java.util.List;
 @Table(name = "Shows")
 public class Show extends PublicEvent{
 
+    // getPerformer() || getPerformers(), service bak
+    //performer ve performers, postmane bak
     String performer;
 
     @OneToMany(mappedBy = "show")

@@ -20,7 +20,6 @@ public class OrganizerService {
         return organizerRepository.save(o);
     }
 
-    public List<Organizer> getorganisersearch(String name, String phone, String mail){
-        return organizerRepository.findByFirstNameContainsOrSurnameContainsOrPhoneEqualsOrEmailStartsWith(name, phone, mail);
-    }
+    public List<Organizer> getorganisersearch(String name, String phone, String mail)
+    {return organizerRepository.findByFirstNameContainsOrSurnameContainsOrPhoneEqualsOrEmailStartsWith(name, name, phone, mail);}
 }

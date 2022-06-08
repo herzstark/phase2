@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -21,7 +22,7 @@ public class ShowController {
     public ShowService showService;
 
     @PostMapping("/addShow")
-    public Show addShow(Show s){
+    public Show addShow(@RequestBody Show s){
         return showService.addShow(s);
     }
 

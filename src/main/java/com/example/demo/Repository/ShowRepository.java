@@ -10,5 +10,5 @@ import java.util.List;
  */
 public interface ShowRepository extends JpaRepository<Show,Integer> {
 
-    public List<Show> findByShowDurationContains(int duration);
+    public List<Show> findBydurationContains(int duration);
 }

@@ -60,7 +60,7 @@ public class PublicEvent {
     //@OneToMany(mappedBy = "festivalRun", cascade = CascadeType.ALL)
     //private List<Festival> festivals;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "festivalRunId",insertable = false, updatable = false)
     private FestivalRun festivalRun;
 

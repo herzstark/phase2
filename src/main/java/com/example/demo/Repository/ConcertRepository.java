@@ -10,5 +10,5 @@ import java.util.List;
  */
 public interface ConcertRepository extends JpaRepository <Concert,Integer> {
 
-    public List<Concert> findByConcertdescriptionContains(String keyword);
+    public List<Concert> findBydescriptionContains(String keyword);
 }

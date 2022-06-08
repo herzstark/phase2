@@ -16,11 +16,9 @@ public interface FestivalRepository extends JpaRepository<Festival,Integer> {
     @Query("SELECT f FROM Festival f WHERE f.name =:name")
     public  List<Festival> getfestivalsbyname(@Param("name") String name);
 
-    //maxın yeri doğru mu
-    @Query("SELECT f FROM Festival f WHERE f.festivalid IN MAX(SELECT fr.festival.festivalid FROM FestivalRun fr ORDER BY fr.festival.festivalid ASC)")
-    public List<Festival> getpopularfestivals();
 
-
-
+   //@Query("SELECT f FROM Festival f WHERE f.festivalid (SELECT fr.festival.festivalid FROM FestivalRun fr GROUP BY fr.festival.festivalid)")
+   @Query("SELECT a FROM Festival a WHERE a.festivalid = (SELECT b.festival.festivalid, MAX(b.festivalRunId) FROM FestivalRun b GROUP BY b.festival.festivalid)")
+   public List<Festival> getpopularfestivals();
 
 }

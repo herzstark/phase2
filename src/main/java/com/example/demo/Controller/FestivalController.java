@@ -35,9 +35,7 @@ public class FestivalController {
         return festivalService.getFestivalsForaCity(city);
     }
 
-    @GetMapping("/popularfestivals")
-    public  List<Festival> getpopularfestivals(){
-        return festivalService.getpopularfestivals();
-    }
+   @GetMapping("/popularfestivals")
+    public  List<Festival> getpopularfestivals(){return festivalService.getpopularfestivals();}
 
 }

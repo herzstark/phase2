@@ -21,7 +21,7 @@ public class ShowService {
     }
 
     public List<Show> getshowsbyduration(int duration){
-        return showRepository.findByShowDurationContains(duration);
+        return showRepository.findBydurationContains(duration);
     }
 
     public List<Show> findcrowdedshows(){

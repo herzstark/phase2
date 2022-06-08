@@ -10,5 +10,5 @@ import java.util.List;
  */
 public interface OrganizerRepository extends JpaRepository<Organizer,String> {
 
-    public List<Organizer>findByFirstNameContainsOrSurnameContainsOrPhoneEqualsOrEmailStartsWith(String name, String phone, String mail);
+    public List<Organizer>findByFirstNameContainsOrSurnameContainsOrPhoneEqualsOrEmailStartsWith(String name, String surname, String phone, String mail);
 }

@@ -57,15 +57,15 @@ import java.util.Set;
 @Entity
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "festivalRunId")
 public class FestivalRun {
-    @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
-    @Column (name = "festivalRunId")
 
+    @Id
+    //@GeneratedValue (strategy = GenerationType.IDENTITY)
+    //@Column (name = "festivalRunId")
     private int festivalRunId;
     private Date startDate;
     private int duration;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "festivalid",insertable = false, updatable = false)
     private Festival festival;
 

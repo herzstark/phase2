@@ -24,7 +24,6 @@ public class OrganizerController {
     }
 
     @GetMapping("/organisersearch")
-    public List<Organizer> getorganisersearch(String name, String phone, String mail){
-        return organizerService.getorganisersearch(name, phone, mail);
-    }
+    public List<Organizer> getorganisersearch(String name, String phone, String mail)
+    {return organizerService.getorganisersearch(name, phone, mail);}
 }
