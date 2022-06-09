@@ -19,6 +19,12 @@ public class OrganizerService {
         return organizerRepository.save(o);
     }
 
+    /**
+     * Query derivation mechanism service class for findByFirstNameContainsOrSurnameContainsOrPhoneEqualsOrEmailStartsWith
+     * @param name
+     * @param phone
+     * @param mail
+     */
     public List<Organizer> getorganisersearch(String name, String phone, String mail)
     {return organizerRepository.findByFirstNameContainsOrSurnameContainsOrPhoneEqualsOrEmailStartsWith(name, name, phone, mail);}
 }

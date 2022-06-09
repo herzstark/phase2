@@ -20,10 +20,17 @@ public class ConcertService {
         return concertRepository.save(c);
     }
 
+    /**
+     * Query derivation mechanism service class for findBydescriptionContains
+     * @param keyword
+     */
     public List<Concert> getconcertsbydescription(String keyword){
         return concertRepository.findBydescriptionContains(keyword);
     }
 
+    /**
+     *Service method implementation for findlongestconcerts
+     */
     public List<Concert> findlongestconcerts() {
         int longest = -1;
 

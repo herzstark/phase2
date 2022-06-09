@@ -20,10 +20,16 @@ public class ShowService {
         return showRepository.save(s);
     }
 
+    /**
+     * Query derivation mechanism repository class for findBydurationContains
+     * @param duration
+     */
     public List<Show> getshowsbyduration(int duration){
         return showRepository.findBydurationContains(duration);
     }
-
+    /**
+     *Service method implementation for findcrowdedshows
+     */
     public List<Show> findcrowdedshows(){
         int crowded = -1;
 

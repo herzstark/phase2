@@ -23,6 +23,12 @@ public class OrganizerController {
         return organizerService.addorganizer(o);
     }
 
+    /**
+     * Query derivation mechanism repository class for findByFirstNameContainsOrSurnameContainsOrPhoneEqualsOrEmailStartsWith
+     * @param name
+     * @param phone
+     * @param mail
+     */
     @GetMapping("/organisersearch")
     public List<Organizer> getorganisersearch(String name, String phone, String mail)
     {return organizerService.getorganisersearch(name, phone, mail);}

@@ -20,12 +20,18 @@ public class ConcertController {
         return concertService.addConcert(c);
     }
 
+    /**
+     * Query derivation mechanism controller class for findBydescriptionContains
+     * @param keyword
+     */
     @GetMapping("/concertsbydescription")
     public List<Concert> concertsbydescription(String keyword){
         return concertService.getconcertsbydescription(keyword);
     }
 
-
+    /**
+     * Controller method implementation for findlongestconcerts
+     */
     @GetMapping("/getlongestconcerts")
     public List<Concert> getlongestconcerts(){
         return concertService.findlongestconcerts();

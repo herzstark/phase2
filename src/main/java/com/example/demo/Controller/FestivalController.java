@@ -35,9 +35,16 @@ public class FestivalController {
         return festivalService.getFestivalsForaCity(city);
     }
 
+    /**
+     * controller class for query to get popular festivals
+     */
    @GetMapping("/popularfestivals")
     public  List<Festival> getpopularfestivals(){return festivalService.getpopularfestivals();}
 
+    /**
+     * controller for query to get festival by name
+     * @param name
+     */
     @GetMapping("/festivalsbyname/{name}")
     public List<Festival> getfestivalsbyname(String name){return  festivalService.getfestivalsbyname(name);}
 }

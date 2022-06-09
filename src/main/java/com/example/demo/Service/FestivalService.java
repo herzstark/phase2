@@ -28,9 +28,16 @@ public class FestivalService {
 
     public List<Festival> getFestivalsForaCity(String city){ return festivalRepository.findByplace(city);}
 
+    /**
+     * Service class for getfestivalbyname query
+     * @param name
+     */
     public List<Festival> getfestivalsbyname(String name) {
         return festivalRepository.getfestivalsbyname(name);
     }
 
+    /**
+     *Service class for getpopularfestivals query
+     */
     public List<Festival> getpopularfestivals(){return festivalRepository.getpopularfestivals();}
 }

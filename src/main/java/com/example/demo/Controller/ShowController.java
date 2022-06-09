@@ -26,11 +26,17 @@ public class ShowController {
         return showService.addShow(s);
     }
 
+    /**
+     * Query derivation mechanism controller class for findBydurationContains
+     * @param duration
+     */
     @GetMapping("/showsbyduration/{duration}")
     public List<Show> showsbyduration(int duration){
         return showService.getshowsbyduration(duration);
     }
-
+    /**
+     *Controller method implementation for getcrowdedshows
+     */
     @GetMapping("/getcrowdedshows")
     public List<Show> getcrowdedshows(){
         return showService.findcrowdedshows();
