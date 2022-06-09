@@ -17,8 +17,10 @@ public interface FestivalRepository extends JpaRepository<Festival,Integer> {
     public  List<Festival> getfestivalsbyname(@Param("name") String name);
 
 
+
+
    //@Query("SELECT f FROM Festival f WHERE f.festivalid (SELECT fr.festival.festivalid FROM FestivalRun fr GROUP BY fr.festival.festivalid)")
-   @Query("SELECT a FROM Festival a WHERE a.festivalid = (SELECT b.festival.festivalid, MAX(b.festivalRunId) FROM FestivalRun b GROUP BY b.festival.festivalid)")
+   @Query("SELECT a FROM Festival a WHERE a.festivalid IN (SELECT b.festival.festivalid FROM Festival a, FestivalRun b GROUP BY b.festival.festivalid HAVING COUNT(*)>0)")
    public List<Festival> getpopularfestivals();
 
 }

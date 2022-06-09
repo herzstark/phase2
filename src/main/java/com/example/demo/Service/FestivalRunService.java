@@ -15,7 +15,7 @@ public class FestivalRunService {
     @Autowired
     private FestivalRunRepository festivalRunRepository;
     private FestivalRepository festival;
-    int i = 1;
+    //int i = 1;
 
     public FestivalRun addFestivalRun(FestivalRun f){
         return festivalRunRepository.save(f);

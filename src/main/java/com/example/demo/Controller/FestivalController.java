@@ -38,4 +38,6 @@ public class FestivalController {
    @GetMapping("/popularfestivals")
     public  List<Festival> getpopularfestivals(){return festivalService.getpopularfestivals();}
 
+    @GetMapping("/festivalsbyname/{name}")
+    public List<Festival> getfestivalsbyname(String name){return  festivalService.getfestivalsbyname(name);}
 }

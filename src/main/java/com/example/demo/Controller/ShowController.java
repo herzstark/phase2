@@ -26,7 +26,7 @@ public class ShowController {
         return showService.addShow(s);
     }
 
-    @GetMapping("/showsbyduration")
+    @GetMapping("/showsbyduration/{duration}")
     public List<Show> showsbyduration(int duration){
         return showService.getshowsbyduration(duration);
     }

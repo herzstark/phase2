@@ -41,15 +41,15 @@ import java.util.List;
  * This is PublicEvent class which builds the one of the EERD entities
  */
 @Data
-//@NoArgsConstructor
-//@AllArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 @Inheritance(strategy = InheritanceType.JOINED)
 @Entity
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "publicId")
 public class PublicEvent {
     @Id
     private int publicId;
-    private Date startDate;
+    private String startDate;
     private String startType;
     private int duration;
     private String name;

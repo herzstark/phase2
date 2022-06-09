@@ -56,7 +56,8 @@ public class Festival {
     private int festivalid;
     private String name;
     private String place;
-    @OneToMany(mappedBy = "festival", cascade = CascadeType.ALL)
+
+    @OneToMany(mappedBy = "festival")
     private List<FestivalRun> festivalRuns;
 
 
